@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function(spUtil,$scope) {
+  /* widget controller */
+  var c = this;
+	
+	$scope.errorMsg = function(){
+		spUtil.addErrorMessage('There has been an error processing your request');
+		
+	}
+	$scope.infoMsg = function(){
+		spUtil.addInfoMessage('There has been an error processing your request');
+		
+	}
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>sputil</id>
+        <internal>false</internal>
+        <link/>
+        <name>SPUTIL</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {  /* populate the 'data' object */  /* e.g., data.table = $sp.getValue('table'); */})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-28 16:18:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>fe1490600f031300c4fa8b9ae1050e37</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>SPUTIL</sys_name>
+        <sys_package display_value="CreateNotes" source="x_snc_createnotes">df5fd9a5090232007f44e1046c8ff69f</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="CreateNotes">df5fd9a5090232007f44e1046c8ff69f</sys_scope>
+        <sys_update_name>sp_widget_fe1490600f031300c4fa8b9ae1050e37</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-28 16:27:47</sys_updated_on>
+        <template><![CDATA[<div>
+<!-- your widget template -->
+  <button ng-click = 'errorMsg()'>
+    ERROR!!!!
+  </button>
+</div>
+<div>
+   <button ng-click = 'infoMsg()'>
+    INFO
+  </button>
+</div>]]></template>
+    </sp_widget>
+</record_update>
